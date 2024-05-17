@@ -71,5 +71,5 @@ sprite_frames = SubResource("SpriteFrames_37ygb")
 animation = &"Run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(63, 21)
+position = Vector2(46, 35)
 shape = SubResource("CapsuleShape2D_a00gb")
