@@ -1,6 +1,8 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 400 # how fast can the player move? 
+@export var gravity = 30 # how much gravity affects the player?
+@export var jump_force = 300 
 var screen_size
 
 func _ready():
@@ -8,16 +10,24 @@ func _ready():
 	#hide()
 	#uncomment this when we have a "start game" button
 	
-func _process(delta):
+func _physics_process(delta):
 	var velocity = Vector2.ZERO #set players movement vector to 2d zero to start
-	
+	if !is_on_floor():
+		velocity.y += gravity
+		if velocity.y > 750:
+			velocity.y = 750
+			
+	#jump
+	if Input.is_action_pressed("jump"):
+		velocity.y = -jump_force
+			
 	#basic player controller
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
 		
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
-	#todo: add jump 
+	
 	
 	#if velocity array is holding an x value and a y value (ie you're moving diagonolly, 
 		#normalize it
