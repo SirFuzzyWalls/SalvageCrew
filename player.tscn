@@ -105,17 +105,17 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a00gb"]
-radius = 80.0
-height = 192.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6y6q"]
+size = Vector2(100, 120)
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -201)
 script = ExtResource("1_la4fh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(272, 104)
-scale = Vector2(8, 8)
+position = Vector2(-6, 104)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_lvbqp")
 animation = &"Idle"
 metadata/_aseprite_wizard_config_ = {
@@ -135,5 +135,8 @@ metadata/_aseprite_wizard_interface_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "ff4da549de07613765bd245f7ea3c5c8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(272, 104)
-shape = SubResource("CapsuleShape2D_a00gb")
+position = Vector2(-6, 104)
+shape = SubResource("RectangleShape2D_e6y6q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2, -48)

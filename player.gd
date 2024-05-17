@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 400 # how fast can the player move? 
 @export var gravity = 30 # how much gravity affects the player?
-@export var jump_force = 300 
+@export var jump_force = 500 
 var screen_size
 
 func _ready():
@@ -11,23 +11,19 @@ func _ready():
 	#uncomment this when we have a "start game" button
 	
 func _physics_process(delta):
-	var velocity = Vector2.ZERO #set players movement vector to 2d zero to start
+
 	if !is_on_floor():
 		velocity.y += gravity
-		if velocity.y > 750:
-			velocity.y = 750
+		if velocity.y > 1000:
+			velocity.y = 1000
 			
 	#jump
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 			
 	#basic player controller
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-		
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
+	velocity.x = speed * horizontal_direction
 	
 	#if velocity array is holding an x value and a y value (ie you're moving diagonolly, 
 		#normalize it
@@ -51,4 +47,4 @@ func _physics_process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite2D.animation = "Jump"
 			
-		
+	move_and_slide()
