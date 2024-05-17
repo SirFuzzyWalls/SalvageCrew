@@ -14,10 +14,14 @@ config/name="SalvageCrew"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[aseprite]
+
+import/import_plugin/default_automatic_importer="SpriteFrames"
+
 [display]
 
-window/size/viewport_width=256
-window/size/viewport_height=224
+window/size/viewport_width=600
+window/size/viewport_height=600
 
 [editor]
 
