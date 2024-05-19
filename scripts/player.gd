@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
-@export var speed = 450 # how fast can the player move? 
+@export var speed = 475 # how fast can the player move? 
 @export var gravity = 30 # how much gravity affects the player?
 @export var jump_force = 500 
 var screen_size
-
+var score = 0
 func _ready():
 	screen_size = get_viewport_rect().size
+	#connect to the global coin signal
+	add_to_group("Player")
 	#hide()
 	#uncomment this when we have a "start game" button
 	
@@ -39,7 +41,14 @@ func update_animation(horizontal_direction):
 	else: 
 		if velocity.y < 0:
 			$AnimatedSprite2D.animation = "Jump"
+			$AnimatedSprite2D.flip_h = velocity.x < 0
 		elif velocity.y == 0:
 			$AnimatedSprite2D.animation = "JumpToFall"
+			$AnimatedSprite2D.flip_h = velocity.x < 0
 		elif velocity.y > 0:
 			$AnimatedSprite2D.animation = "Fall"
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+
+func _on_coin_collected():
+	score += 100
+	print("Score: ", score)
