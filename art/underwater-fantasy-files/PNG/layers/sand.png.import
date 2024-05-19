@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b05nw36u5gca2"
-path="res://.godot/imported/S1014.png-1d9fdd9aa2de1772849ace5f7c7d5c3c.ctex"
+uid="uid://dujr3xlmfwm8m"
+path="res://.godot/imported/sand.png-ae9badde3a7b7ab97e686162f93d0ba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/coin_V_1_1/S1014.png"
-dest_files=["res://.godot/imported/S1014.png-1d9fdd9aa2de1772849ace5f7c7d5c3c.ctex"]
+source_file="res://art/underwater-fantasy-files/PNG/layers/sand.png"
+dest_files=["res://.godot/imported/sand.png-ae9badde3a7b7ab97e686162f93d0ba0.ctex"]
 
 [params]
 

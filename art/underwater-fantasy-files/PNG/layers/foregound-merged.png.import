@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b662j4vs0kfc6"
-path="res://.godot/imported/S1012.png-036bb6402fe053dc0d038ac598109cd1.ctex"
+uid="uid://dn30fi7w70uhd"
+path="res://.godot/imported/foregound-merged.png-651d526ba13e02549ba24ced3e49c1cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/coin_V_1_1/S1012.png"
-dest_files=["res://.godot/imported/S1012.png-036bb6402fe053dc0d038ac598109cd1.ctex"]
+source_file="res://art/underwater-fantasy-files/PNG/layers/foregound-merged.png"
+dest_files=["res://.godot/imported/foregound-merged.png-651d526ba13e02549ba24ced3e49c1cf.ctex"]
 
 [params]
 

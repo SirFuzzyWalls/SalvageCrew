@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqsemj60361od"
-path="res://.godot/imported/S1013.png-e9d9315a01186ab2d71680c8c8b146f3.ctex"
+uid="uid://cco8gfhtrgdfg"
+path="res://.godot/imported/far.png-2929bb9d29fafaf8244835ed646bdb12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/coin_V_1_1/S1013.png"
-dest_files=["res://.godot/imported/S1013.png-e9d9315a01186ab2d71680c8c8b146f3.ctex"]
+source_file="res://art/underwater-fantasy-files/PNG/layers/far.png"
+dest_files=["res://.godot/imported/far.png-2929bb9d29fafaf8244835ed646bdb12.ctex"]
 
 [params]
 

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmft6xmgh5vv1"]
+
+[ext_resource type="Texture2D" uid="uid://dn30fi7w70uhd" path="res://art/underwater-fantasy-files/PNG/layers/foregound-merged.png" id="1_27xbq"]
+[ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_abegi"]
+[ext_resource type="Texture2D" uid="uid://dujr3xlmfwm8m" path="res://art/underwater-fantasy-files/PNG/layers/sand.png" id="2_quu34"]
+[ext_resource type="Texture2D" uid="uid://cco8gfhtrgdfg" path="res://art/underwater-fantasy-files/PNG/layers/far.png" id="3_m6jt6"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_abegi")
+
+[node name="BackgroundFar" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundFar"]
+texture_repeat = 2
+position = Vector2(480, 504)
+texture = ExtResource("3_m6jt6")
+
+[node name="Background" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(480, 504)
+texture = ExtResource("2_quu34")
+
+[node name="Foreground" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground"]
+position = Vector2(480, 504)
+texture = ExtResource("1_27xbq")
