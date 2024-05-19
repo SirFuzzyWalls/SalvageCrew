@@ -6,25 +6,113 @@
 [ext_resource type="Texture2D" uid="uid://cco8gfhtrgdfg" path="res://art/underwater-fantasy-files/PNG/layers/far.png" id="3_m6jt6"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_scale = 161.906
 script = ExtResource("1_abegi")
 
 [node name="BackgroundFar" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.2, 0.2)
+texture_repeat = 2
+position = Vector2(768, 456)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.01, 0.01)
+motion_mirroring = Vector2(512, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BackgroundFar"]
 texture_repeat = 2
-position = Vector2(480, 504)
+position = Vector2(-128, -56)
+scale = Vector2(2, 2)
 texture = ExtResource("3_m6jt6")
+region_rect = Rect2(0, 0, 256, 192)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": false,
+"output_section": true,
+"slice_section": false
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundFar"]
+texture_repeat = 2
+position = Vector2(896, -56)
+scale = Vector2(2, 2)
+texture = ExtResource("3_m6jt6")
+region_rect = Rect2(0, 0, 256, 192)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": false,
+"output_section": true,
+"slice_section": false
+}
+
+[node name="Sprite2D3" type="Sprite2D" parent="BackgroundFar"]
+texture_repeat = 2
+position = Vector2(1920, -56)
+scale = Vector2(2, 2)
+texture = ExtResource("3_m6jt6")
+region_rect = Rect2(0, 0, 256, 192)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": false,
+"output_section": true,
+"slice_section": false
+}
+
+[node name="Sprite2D4" type="Sprite2D" parent="BackgroundFar"]
+texture_repeat = 2
+position = Vector2(2944, -56)
+scale = Vector2(2, 2)
+texture = ExtResource("3_m6jt6")
+region_rect = Rect2(0, 0, 256, 192)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": false,
+"output_section": true,
+"slice_section": false
+}
 
 [node name="Background" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.5, 0.5)
+texture_repeat = 2
+position = Vector2(592, 592)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.03, 0.03)
+motion_mirroring = Vector2(512, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(480, 504)
+texture_repeat = 2
+position = Vector2(-40, -28)
+scale = Vector2(2, 2)
+texture = ExtResource("2_quu34")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+texture_repeat = 2
+position = Vector2(984, -28)
+scale = Vector2(2, 2)
+texture = ExtResource("2_quu34")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+texture_repeat = 2
+position = Vector2(2008, -28)
+scale = Vector2(2, 2)
+texture = ExtResource("2_quu34")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background"]
+texture_repeat = 2
+position = Vector2(3032, -28)
+scale = Vector2(2, 2)
 texture = ExtResource("2_quu34")
 
 [node name="Foreground" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(768, 560)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.15, 0.15)
+motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Foreground"]
-position = Vector2(480, 504)
+position = Vector2(128, -4)
+scale = Vector2(2, 2)
 texture = ExtResource("1_27xbq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Foreground"]
+position = Vector2(2176, -4)
+scale = Vector2(2, 2)
+texture = ExtResource("1_27xbq")
+flip_h = true

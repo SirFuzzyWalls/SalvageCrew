@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmfm02uv6by24"]
+[gd_scene load_steps=8 format=3 uid="uid://cmfm02uv6by24"]
 
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_e1mqk"]
 [ext_resource type="PackedScene" uid="uid://sfpnb72bbc2a" path="res://scenes/player.tscn" id="1_m184g"]
 [ext_resource type="PackedScene" uid="uid://bsju6crurtx85" path="res://scenes/coin.tscn" id="2_0lr2v"]
 [ext_resource type="AudioStream" uid="uid://ofdae4ef3w3r" path="res://music/Bustling Beards.wav" id="3_aoybx"]
@@ -12,22 +13,24 @@ size = Vector2(1000, 100)
 size = Vector2(996, 100)
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_e1mqk")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_m184g")]
-position = Vector2(-176, 120)
+position = Vector2(728, 104)
 
 [node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(238, 552)
+position = Vector2(1160, 600)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 modulate = Color(0, 0.371558, 0.371558, 1)
 mesh = SubResource("QuadMesh_wuef5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_ti0a6")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(238, 552)
+position = Vector2(1160, 600)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
 modulate = Color(0, 0.371558, 0.371558, 1)
@@ -39,7 +42,7 @@ position = Vector2(1124, -152)
 shape = SubResource("RectangleShape2D_ti0a6")
 
 [node name="Platform3" type="StaticBody2D" parent="."]
-position = Vector2(238, 552)
+position = Vector2(1160, 600)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
 modulate = Color(0, 0.371558, 0.371558, 1)
@@ -51,29 +54,25 @@ position = Vector2(1410, -424)
 shape = SubResource("RectangleShape2D_ti0a6")
 
 [node name="Coin" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(288, 448)
+position = Vector2(1210, 496)
 
 [node name="Coin2" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(400, 448)
+position = Vector2(1322, 496)
 
 [node name="Coin3" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(528, 440)
+position = Vector2(1450, 488)
 
 [node name="Coin4" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(896, 288)
+position = Vector2(1818, 336)
 
 [node name="Coin5" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(1016, 128)
+position = Vector2(1938, 176)
 
 [node name="Coin6" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(1144, -8)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_aoybx")
-autoplay = true
+position = Vector2(2066, 40)
 
 [node name="Platform4" type="StaticBody2D" parent="."]
-position = Vector2(238, 552)
+position = Vector2(1160, 600)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform4"]
 modulate = Color(0, 0.371558, 0.371558, 1)
@@ -85,15 +84,19 @@ position = Vector2(2962, -430)
 shape = SubResource("RectangleShape2D_ti0a6")
 
 [node name="Coin7" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(2756, 8)
+position = Vector2(3678, 56)
 
 [node name="Coin8" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(3140, 8)
+position = Vector2(4062, 56)
 
 [node name="Coin9" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(2496, -168)
+position = Vector2(3418, -120)
 
 [node name="Coin10" parent="." instance=ExtResource("2_0lr2v")]
-position = Vector2(3620, 8)
+position = Vector2(4542, 56)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_aoybx")
+autoplay = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_eskj1")]
